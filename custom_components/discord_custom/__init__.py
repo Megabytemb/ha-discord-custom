@@ -3,6 +3,7 @@
 For more details about this integration, please refer to
 https://github.com/Megabytemb/ha-discord-personal
 """
+
 from __future__ import annotations
 
 import logging
@@ -37,7 +38,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     discordBot = DiscordClient(intents=intents)
 
     hass.data[DOMAIN][entry.entry_id] = coordinator = DiscordDataUpdateCoordinator(
-        hass, client=discordBot
+        hass, client=discordBot, config_entry=entry
     )
 
     # await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)

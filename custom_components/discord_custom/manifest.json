@@ -9,7 +9,7 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/Megabytemb/ha-discord-personal/issues",
   "requirements": [
-    "discord.py>=2.2.3"
+    "discord.py>=2.7.1"
   ],
   "version": "0.0.0"
 }
